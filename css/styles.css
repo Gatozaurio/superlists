@@ -1,0 +1,16 @@
+#footer {
+    background: linear-gradient(90deg, #1c3643, #273b47 25%, #1e5372);
+    color: white;
+}
+
+#footer a {
+    color: white;
+}
+
+#header img {
+    width: 80px;
+}
+
+.link-important {
+    color: #97c983 !important;
+}
