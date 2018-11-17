@@ -1,25 +1,16 @@
-<?php 
-    /* var_dump($_SERVER);
-    die(); *//* 
-    $url = $_SERVER['REQUEST_SCHEME']."://".$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
-    var_dump($_SERVER);
-    die(); */
-
-    require_once 'setup.php';
-    require_once 'database/conexion.php';
-    require_once 'includes/header.php'; 
-?>
 <?php
 
-$password = "manola";
-$password_segura = '$2y$10$P9ryf/1MSrSmqLSjVoAG/.2tJlttOcKvmuClAOLdsORt8CPPrVPt6';
+require_once 'setup.php';
+require_once 'database/conexion.php';
+require_once 'includes/header.php'; 
 
 if( password_verify( $password, $password_segura)){
-    echo "Contraseña correcta";
+    $_SESSION['userdata'] = $usuario;
+    header("Location: ".APP_URL);/////
 }else{
     echo "Contraseña incorrecta";
 }
 
-?>
+require_once 'includes/footer.php';
 
-<?php require_once 'includes/footer.php'; ?>
+?>

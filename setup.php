@@ -13,3 +13,6 @@ define('APP_URL',$url.$serverName.$request);
 define('APP_PATH', __DIR__);
 /** Nombre de la aplicación */
 define('APP_NAME', 'SuperLists');
+
+// ubucuar la sesión 
+session_start();

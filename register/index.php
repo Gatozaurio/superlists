@@ -1,6 +1,11 @@
 <?php
 
+    require_once '../setup.php';
     require_once '../database/conexion.php';
+
+    if( isset($_SESSION['userdata']) ){
+        header("Location: ".APP_URL);
+    }
 
     if( isset($_POST['registro'])){
         $username = $_POST['username'] ?? null;
@@ -75,5 +80,5 @@
             die();
         }
     }
-
+    
     require 'register.view.php';

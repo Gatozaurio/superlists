@@ -23,8 +23,9 @@
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
+                    <?php //if(isset())?> 
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
+                        <a class="nav-link" href="<?=APP_URL?>login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link link-important" href="<?=APP_URL?>register">Registro</a>
